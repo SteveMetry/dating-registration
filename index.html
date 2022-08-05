@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lonely Singles 101</title>
+  <link rel="stylesheet" href="custom.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+  <form id="thirstySingle" class="grid gap-5 grid-cols-1 m-5 w-96" onsubmit="event.preventDefault(); thirstySingle();">
+    <div class="flex flex-col">
+      <input name="firstName" class="w-full max-w-lg rounded-lg border border-slate-200 px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40" placeholder="First name" />
+      <p id="firstNameError" class="text-red-600" style="display: none;">Invalid first name!</p>
+    </div>
+    <div class="flex flex-col">
+      <input name="lastName" class="w-full max-w-lg rounded-lg border border-slate-200 px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40" placeholder="Last name" />
+      <p id="lastNameError" class="text-red-600" style="display: none;">Invalid last name!</p>
+    </div>
+    <div class="flex flex-col">
+      <input name="age" class="w-full max-w-lg rounded-lg border border-slate-200 px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40" placeholder="Age" type="number" min="18" max="80" />
+      <p id="ageError" class="text-red-600" style="display: none;">Invalid age!</p>
+    </div>
+    <div class="flex flex-col">
+      <input name="ethnicity" class="w-full max-w-lg rounded-lg border border-slate-200 px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40" placeholder="Ethnicity" />
+      <p id="ethnicityError" class="text-red-600" style="display: none;">Invalid ethnicity!</p>
+    </div>
+    <select name="gender" class="w-full max-w-lg rounded-lg border border-slate-200 px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40">
+      <option value="male" selected>Male</option>
+      <option value="female">Female</option>
+    </select>
+    <div class="flex flex-col">
+      <input name="height" class="w-full max-w-lg rounded-lg border border-slate-200 px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40" placeholder="Height (in meters)" />
+      <p id="heightError" class="text-red-600" style="display: none;">Invalid height!</p>
+    </div>
+    <div class="flex flex-col">
+      <input name="location" class="w-full max-w-lg rounded-lg border border-slate-200 px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40" placeholder="Location" />
+      <p id="locationError" class="text-red-600" style="display: none;">Invalid location!</p>
+    </div>
+    <select name="maritalStatus" class="w-full max-w-lg rounded-lg border border-slate-200 px-2 py-1 hover:border-blue-500 focus:outline-none focus:ring focus:ring-blue-500/40 active:ring active:ring-blue-500/40">
+      <option value="single" selected>Single</option>
+      <option value="married">Married</option>
+      <option value="divorced">Divorced</option>
+    </select>
+    <div class="text-center">
+      <button type="submit" class="border border-gray-700 bg-gray-700 text-white rounded-md px-4 py-2 m-2 transition duration-500 ease select-none hover:bg-gray-800 focus:outline-none focus:shadow-outline w-36">Save Info</button>
+    </div>
+  </form>
+  <p id="result"></p>
+  <script src="custom.js"></script>
+</body>
+</html>
